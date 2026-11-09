@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Bem-vindo | Clínica Psiquiátrica</title>
+    <link rel="stylesheet" href="../static/css/auth.css">
+    <script src="../static/js/auth.js"></script>
+</head>
+
+<body class="auth-page carregando">
+
+    <header class="auth-header">
+        <a href="../index.html" aria-label="Ir para a página inicial">
+            <img src="../static/img/logo.png" alt="Clínica Psiquiátrica" class="logo">
+        </a>
+        <div class="auth-header-links">
+            <a href="../index.html" class="link-topo">IR PARA O SITE</a>
+            <button type="button" class="botao-secundario botao-auto" id="btnSair">SAIR DO SISTEMA</button>
+        </div>
+    </header>
+
+    <main class="bv-main">
+
+        <section class="bv-hero" aria-labelledby="titulo">
+            <p class="subtitulo" id="saudacao">ÁREA DO PACIENTE</p>
+            <h1 id="titulo">Bem-vindo(a), <span id="nomeUsuario"></span>!</h1>
+            <p class="descricao">
+                Que bom ter você aqui. Seu acesso foi realizado com sucesso e
+                suas informações estão protegidas pelo sigilo médico.
+            </p>
+
+            <dl class="bv-dados">
+                <div>
+                    <dt>Nome</dt>
+                    <dd id="dadoNome"></dd>
+                </div>
+                <div>
+                    <dt>E-mail</dt>
+                    <dd id="dadoEmail"></dd>
+                </div>
+                <div>
+                    <dt>Último acesso</dt>
+                    <dd id="dadoAcesso"></dd>
+                </div>
+            </dl>
+        </section>
+
+        <h2 class="bv-secao">O que você deseja fazer?</h2>
+
+        <nav class="bv-atalhos" aria-label="Atalhos">
+            <a class="atalho" href="contato.html">
+                <h3>Agendar consulta</h3>
+                <p>Veja os horários e as formas de contato para marcar seu atendimento.</p>
+                <span>ACESSAR →</span>
+            </a>
+            <a class="atalho" href="medicos.html">
+                <h3>Conhecer os médicos</h3>
+                <p>Informações sobre formação e registro dos profissionais da clínica.</p>
+                <span>ACESSAR →</span>
+            </a>
+            <a class="atalho" href="../index.html#consulta">
+                <h3>Primeira consulta</h3>
+                <p>Saiba como funciona o primeiro atendimento e o que levar.</p>
+                <span>ACESSAR →</span>
+            </a>
+        </nav>
+
+    </main>
+
+    <footer class="auth-footer">
+        Clínica Psiquiátrica — Barra Funda<br>
+        Atendimento com acolhimento e responsabilidade ·
+        <a href="privacidade.html">Política de privacidade</a>
+    </footer>
+
+    <noscript>
+        <p style="padding:16px;text-align:center;background:#fcebea;color:#b3261e">
+            Ative o JavaScript do navegador para acessar esta página.
+        </p>
+    </noscript>
+
+    <script src="../static/js/bem-vindo.js"></script>
+</body>
+
+</html>

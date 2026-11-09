@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Entrar | Clínica Psiquiátrica</title>
+    <link rel="stylesheet" href="../static/css/auth.css">
+</head>
+
+<body class="auth-page">
+
+    <header class="auth-header">
+        <a href="../index.html" aria-label="Ir para a página inicial">
+            <img src="../static/img/logo.png" alt="Clínica Psiquiátrica" class="logo">
+        </a>
+        <a href="../index.html" class="link-topo">← VOLTAR AO INÍCIO</a>
+    </header>
+
+    <main class="auth-main">
+        <div class="auth-card">
+
+            <aside class="auth-aside">
+                <span class="etiqueta">ÁREA DO PACIENTE</span>
+                <h2>Cuidar da mente é transformar a vida.</h2>
+                <p>Acesse sua conta para acompanhar o seu atendimento com acolhimento, sigilo e responsabilidade.</p>
+            </aside>
+
+            <div class="auth-form-wrap">
+
+                <div id="alerta" class="alerta" role="alert" hidden></div>
+
+                <!-- ============ LOGIN ============ -->
+                <section id="viewLogin" aria-labelledby="tituloLogin">
+                    <p class="subtitulo">BEM-VINDO DE VOLTA</p>
+                    <h1 id="tituloLogin">Entrar na sua conta</h1>
+                    <p class="descricao">Digite seu e-mail e senha para acessar.</p>
+
+                    <form id="formLogin" novalidate>
+                        <div class="campo">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" autocomplete="username"
+                                placeholder="seuemail@exemplo.com" aria-describedby="erro-email" required>
+                            <span class="erro-campo" id="erro-email"></span>
+                        </div>
+
+                        <div class="campo">
+                            <label for="senha">Senha</label>
+                            <div class="campo-senha">
+                                <input type="password" id="senha" name="senha" autocomplete="current-password"
+                                    placeholder="Digite sua senha" aria-describedby="erro-senha" required>
+                                <button type="button" class="btn-mostrar" data-alvo="senha"
+                                    aria-label="Mostrar senha" aria-pressed="false">MOSTRAR</button>
+                            </div>
+                            <span class="erro-campo" id="erro-senha"></span>
+                        </div>
+
+                        <div class="linha-opcoes">
+                            <label class="lembrar">
+                                <input type="checkbox" id="lembrar" name="lembrar">
+                                Manter conectado por 7 dias
+                            </label>
+                            <button type="button" class="link-btn" id="btnEsqueci">Esqueci minha senha</button>
+                        </div>
+
+                        <button type="submit" class="botao" id="btnEntrar">ENTRAR</button>
+                    </form>
+
+                    <p class="rodape-form">
+                        Ainda não tem conta? <a href="cadastro.html">Criar cadastro</a>
+                    </p>
+
+                    <!-- Remova este bloco ao publicar o sistema -->
+                    <details class="demo-box">
+                        <summary>Conta de demonstração</summary>
+                        <p>
+                            E-mail: <strong>paciente@exemplo.com</strong><br>
+                            Senha: <strong>Clinica@123</strong>
+                        </p>
+                    </details>
+                </section>
+
+                <!-- ============ RECUPERAR SENHA ============ -->
+                <section id="viewRecuperar" aria-labelledby="tituloRecuperar" hidden>
+                    <p class="subtitulo">RECUPERAÇÃO DE ACESSO</p>
+                    <h1 id="tituloRecuperar">Esqueci minha senha</h1>
+
+                    <!-- Passo 1: e-mail -->
+                    <form id="formRecuperar" novalidate>
+                        <p class="descricao">Informe o e-mail do seu cadastro e enviaremos um código para criar uma nova
+                            senha.</p>
+
+                        <div class="campo">
+                            <label for="emailRec">E-mail</label>
+                            <input type="email" id="emailRec" autocomplete="email" placeholder="seuemail@exemplo.com"
+                                aria-describedby="erro-emailRec" required>
+                            <span class="erro-campo" id="erro-emailRec"></span>
+                        </div>
+
+                        <button type="submit" class="botao" id="btnEnviarCodigo">ENVIAR CÓDIGO</button>
+                    </form>
+
+                    <!-- Passo 2: código + nova senha -->
+                    <form id="formRedefinir" novalidate hidden>
+                        <div class="alerta" id="infoCodigo" role="status"></div>
+
+                        <div class="campo">
+                            <label for="codigo">Código de 6 dígitos</label>
+                            <input type="text" id="codigo" inputmode="numeric" maxlength="6" autocomplete="one-time-code"
+                                placeholder="000000" aria-describedby="erro-codigo" required>
+                            <span class="erro-campo" id="erro-codigo"></span>
+                        </div>
+
+                        <div class="campo">
+                            <label for="novaSenha">Nova senha</label>
+                            <div class="campo-senha">
+                                <input type="password" id="novaSenha" autocomplete="new-password"
+                                    placeholder="Mínimo de 8 caracteres" aria-describedby="erro-novaSenha" required>
+                                <button type="button" class="btn-mostrar" data-alvo="novaSenha"
+                                    aria-label="Mostrar senha" aria-pressed="false">MOSTRAR</button>
+                            </div>
+                            <span class="dica">Use pelo menos 8 caracteres, com letras e números.</span>
+                            <span class="erro-campo" id="erro-novaSenha"></span>
+                        </div>
+
+                        <div class="campo">
+                            <label for="confirmarNova">Confirmar nova senha</label>
+                            <input type="password" id="confirmarNova" autocomplete="new-password"
+                                placeholder="Repita a nova senha" aria-describedby="erro-confirmarNova" required>
+                            <span class="erro-campo" id="erro-confirmarNova"></span>
+                        </div>
+
+                        <button type="submit" class="botao" id="btnRedefinir">SALVAR NOVA SENHA</button>
+                    </form>
+
+                    <p class="rodape-form">
+                        <button type="button" class="link-btn" id="btnVoltarLogin">← Voltar para o login</button>
+                    </p>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="auth-footer">
+        Clínica Psiquiátrica — Barra Funda<br>
+        Atendimento com acolhimento e responsabilidade ·
+        <a href="privacidade.html">Política de privacidade</a>
+    </footer>
+
+    <noscript>
+        <p style="padding:16px;text-align:center;background:#fcebea;color:#b3261e">
+            Ative o JavaScript do navegador para entrar no sistema.
+        </p>
+    </noscript>
+
+    <script src="../static/js/auth.js"></script>
+    <script src="../static/js/login.js"></script>
+</body>
+
+</html>

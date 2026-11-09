@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informações de contato e atendimento da Clínica Psiquiátrica Barra Funda.">
+    <title>Contato | Clínica Psiquiátrica — Barra Funda</title>
+    <style>
+        :root {
+            --roxo: #51469a;
+            --roxo-escuro: #40377f;
+            --bege: #f2efeb;
+            --texto: #292631;
+            --branco: #fff
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        .logo {
+            width: 280px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bege);
+            color: var(--texto);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7
+        }
+
+        a {
+            color: inherit
+        }
+
+        .header {
+            min-height: 88px;
+            padding: 20px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+            background: var(--bege)
+        }
+
+        .logo {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: clamp(18px, 2vw, 27px);
+            font-weight: bold;
+            color: var(--roxo);
+            text-decoration: none;
+            line-height: 1.2
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap
+        }
+
+        .nav a {
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: .3px;
+            text-decoration: none;
+            color: var(--roxo-escuro)
+        }
+
+        .nav a:hover,
+        .nav a[aria-current="page"] {
+            text-decoration: underline;
+            text-underline-offset: 5px
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--roxo);
+            color: white;
+            text-decoration: none;
+            border: 0;
+            border-radius: 4px;
+            padding: 13px 20px;
+            font-size: 11px;
+            font-weight: bold;
+            cursor: pointer
+        }
+
+        .btn:hover {
+            background: var(--roxo-escuro)
+        }
+
+        .hero {
+            padding: 65px 8% 72px;
+            min-height: 310px;
+            display: flex;
+            align-items: center
+        }
+
+        .hero-inner {
+            max-width: 780px
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            color: var(--roxo);
+            text-transform: uppercase
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Georgia, 'Times New Roman', serif
+        }
+
+        h1 {
+            color: var(--roxo);
+            font-size: clamp(36px, 4.2vw, 54px);
+            line-height: 1.08;
+            margin: 15px 0
+        }
+
+        .hero p {
+            max-width: 620px;
+            margin: 18px 0 24px
+        }
+
+        .section {
+            padding: 45px 7% 58px
+        }
+
+        .section h2 {
+            font-size: clamp(26px, 3vw, 34px);
+            line-height: 1.2;
+            margin: 0 0 24px;
+            color: #17151a
+        }
+
+        .intro {
+            max-width: 850px;
+            margin: 0 0 28px
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px
+        }
+
+        .card {
+            background: var(--branco);
+            border: 1px solid #efedf2;
+            border-radius: 8px;
+            padding: 27px 25px;
+            box-shadow: 0 8px 24px rgba(35, 25, 60, .035)
+        }
+
+        .card h3 {
+            color: var(--roxo);
+            font-size: 17px;
+            margin: 0 0 12px
+        }
+
+        .card p {
+            margin: 0 0 10px;
+            font-size: 14px
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1.3fr .8fr;
+            gap: 42px;
+            align-items: start
+        }
+
+        .panel {
+            background: var(--roxo);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 12px 28px rgba(44, 34, 95, .12)
+        }
+
+        .panel h2,
+        .panel h3 {
+            color: white;
+            margin-top: 0
+        }
+
+        .panel a {
+            color: white
+        }
+
+        .list {
+            padding-left: 20px
+        }
+
+        .list li {
+            margin: 8px 0
+        }
+
+        .footer {
+            background: var(--roxo);
+            color: white;
+            padding: 28px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap
+        }
+
+        .footer p {
+            margin: 3px 0;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-weight: bold;
+            font-size: 14px
+        }
+
+        .footer a {
+            color: white
+        }
+
+        .footer small {
+            display: block;
+            margin-top: 8px
+        }
+
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0
+        }
+
+        .contact-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .25)
+        }
+
+        .note {
+            font-size: 13px;
+            color: #5e5866
+        }
+
+        @media(max-width:900px) {
+            .header {
+                justify-content: center;
+                text-align: center
+            }
+
+            .nav {
+                gap: 15px
+            }
+
+            .two-col {
+                grid-template-columns: 1fr
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+        }
+
+        @media(max-width:600px) {
+            .header {
+                padding: 22px 5%
+            }
+
+            .nav {
+                gap: 12px
+            }
+
+            .nav a {
+                font-size: 10px
+            }
+
+            .hero {
+                padding: 48px 7%
+            }
+
+            .section {
+                padding: 36px 6%
+            }
+
+            .cards {
+                grid-template-columns: 1fr
+            }
+
+            .footer {
+                padding: 25px 6%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="../index.html" aria-label="Ir para a página inicial"><img src="../static/img/logo.png" alt="Clínica Psiquiátrica" class="logo"></a>
+        <nav class="nav" aria-label="Navegação principal">
+            <a href="sobre.html">SOBRE</a>
+            <a href="especialidades.html">ATENDIMENTO</a>
+            <a href="../index.html#consulta">PRIMEIRA CONSULTA</a>
+            <a href="contato.html" aria-current="page">CONTATO</a>
+            <a href="medicos.html">MÉDICOS</a>
+            <a href="login.html" data-auth-link data-area-href="bem-vindo.html">ENTRAR</a>
+        </nav>
+        <a class="btn" href="contato.html">AGENDAR CONSULTA</a>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-inner">
+                <span class="eyebrow">FALE CONOSCO</span>
+                <h1>Estamos aqui para orientar você.</h1>
+                <p>Entre em contato para esclarecer dúvidas sobre a consulta, horários e modalidades de atendimento.</p>
+                <a class="btn" href="../index.html#contato">VER INFORMAÇÕES</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Entre em contato</h2>
+            <p class="intro">Use as informações abaixo para tirar dúvidas sobre horários, modalidades de atendimento e
+                agendamento.</p>
+            <div class="two-col">
+                <div class="card">
+                    <h3>INFORMAÇÕES DE ATENDIMENTO</h3>
+                    <ul class="contact-list">
+                        <li><strong>Local:</strong> Barra Funda</li>
+                        <li><strong>Endereço informado:</strong> Avenida Carlos Mariano da Silva, 10 — Votorantim, SP
+                        </li>
+                        <li><strong>Horário:</strong> segunda a sexta, das 8h às 18h </li>
+                        <li><strong>Modalidade:</strong> presencial ou online, conforme disponibilidade</li>
+                    </ul>
+                </div>
+                <aside class="panel">
+                    <h3>LOCALIZAÇÃO</h3>
+                    <p>Consulte o mapa para planejar sua chegada.</p>
+                    <a class="btn" href="https://maps.app.goo.gl/fYa6WPGqACah9rwJ9" target="_blank"
+                        rel="noopener noreferrer">COMO
+                        CHEGAR</a>
+                    <hr style="border:0;border-top:1px solid rgba(255,255,255,.25);margin:24px 0">
+                    <p>(15) 1234-5678</p>
+                </aside>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Antes de agendar</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>CONFIRME O HORÁRIO</h3>
+                    <p>Entre em contato para verificar os horários disponíveis antes de se deslocar até a clínica.</p>
+                </article>
+                <article class="card">
+                    <h3>DOCUMENTOS E EXAMES</h3>
+                    <p>Se tiver, leve exames, receitas e relatórios anteriores que possam ajudar na consulta.</p>
+                </article>
+                <article class="card">
+                    <h3>SIGILO E ACOLHIMENTO</h3>
+                    <p>As informações compartilhadas durante o atendimento devem ser tratadas com cuidado e conforme as
+                        normas
+                        profissionais aplicáveis.</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div>
+            <p>Clínica Psiquiátrica — Barra Funda</p>
+            <p>Atendimento com acolhimento e responsabilidade</p>
+            <small><a href="../index.html">Voltar à página inicial</a></small>
+        </div>
+        <div><a href="contato.html">Contato e agendamento</a></div>
+    </footer>
+    <script src="../static/js/auth.js"></script>
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

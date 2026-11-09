@@ -1,0 +1,622 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+============================== */
+
+:root {
+    --roxo: #4e4795;
+    --roxo-escuro: #39336f;
+    --bege: #f2efeb;
+    --branco: #ffffff;
+    --texto: #201e24;
+    --cinza: #e5e1df;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.logo {
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bege);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.imagem-destaque {
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.imagem-destaque img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+.header {
+    min-height: 100px;
+    padding: 24px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: var(--roxo);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(20px, 1.7vw, 28px);
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(16px, 2vw, 32px);
+}
+
+.nav a {
+    color: var(--roxo);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    transition: color 0.25s;
+}
+
+.nav a:hover {
+    color: var(--roxo-escuro);
+}
+
+.btn-agendar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 46px;
+    padding: 0 23px;
+    border-radius: 4px;
+    background: var(--roxo);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+    transition: background 0.25s, transform 0.25s;
+}
+
+.btn-agendar:hover {
+    background: var(--roxo-escuro);
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   DESTAQUE PRINCIPAL
+============================== */
+
+.hero {
+    width: 100%;
+}
+
+.hero-conteudo {
+    min-height: 270px;
+    padding: 45px 8%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg,
+            rgba(242, 239, 235, 0.98),
+            rgba(242, 239, 235, 0.86));
+}
+
+/* Faixa do carrossel */
+
+.carousel {
+    min-height: 58px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: linear-gradient(180deg,
+            #dedbdc 0%,
+            #c3c1c4 100%);
+}
+
+.carousel-arrow {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.carousel-bars {
+    display: flex;
+    flex: 1;
+    gap: 8px;
+}
+
+.carousel-bars span {
+    height: 5px;
+    flex: 1;
+    border-radius: 10px;
+    background: #e8e6e8;
+}
+
+.carousel-bars span.active {
+    background: white;
+}
+
+/* ==============================
+   SEÇÕES
+============================== */
+
+.section {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.section h2 {
+    margin-bottom: 36px;
+    color: var(--texto);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(25px, 2vw, 32px);
+    line-height: 1.25;
+    font-weight: bold;
+}
+
+/* ==============================
+   SERVIÇOS
+============================== */
+
+.atendimento {
+    padding-top: 65px;
+    padding-bottom: 70px;
+}
+
+.atendimento h2 {
+    margin-bottom: 36px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.card {
+    min-height: 160px;
+    padding: 28px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: var(--branco);
+    border: 1px solid rgba(78, 71, 149, 0.08);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(40, 35, 50, 0.035);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(40, 35, 50, 0.09);
+}
+
+.card h3 {
+    color: var(--roxo);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.card p {
+    max-width: 330px;
+    color: #56515a;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ==============================
+   PRIMEIRA CONSULTA
+============================== */
+
+.consulta {
+    padding-top: 0;
+    padding-bottom: 85px;
+}
+
+.consulta h2 {
+    margin-bottom: 30px;
+}
+
+.consulta-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 9%;
+}
+
+.consulta-texto p {
+    max-width: 600px;
+    color: #504b53;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.localizacao {
+    width: 100%;
+    max-width: 430px;
+    justify-self: center;
+    padding: 30px 24px;
+    border-radius: 8px;
+    background: var(--roxo);
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(78, 71, 149, 0.14);
+}
+
+.localizacao h3 {
+    margin-bottom: 15px;
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    line-height: 1.3;
+}
+
+.localizacao p {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.8;
+}
+
+/* ==============================
+   RODAPÉ
+============================== */
+
+.footer {
+    min-height: 125px;
+    padding: 30px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: var(--roxo);
+    color: white;
+}
+
+.footer-info p {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.8;
+}
+
+.footer-info a {
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    color: #fff;
+    transition: background 0.25s, transform 0.25s;
+}
+
+.social a:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-3px);
+}
+
+.social svg {
+    width: 23px;
+    height: 23px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.social svg .fill {
+    fill: currentColor;
+    stroke: none;
+}
+
+/* ==============================
+   NOTEBOOKS E TELAS MENORES
+============================== */
+
+@media (max-width: 1100px) {
+    .header {
+        padding: 22px 4%;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav {
+        gap: 14px;
+    }
+
+    .nav a {
+        font-size: 10px;
+    }
+
+    .section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .cards {
+        gap: 18px;
+    }
+
+    .card {
+        padding: 22px 16px;
+    }
+
+    .consulta-grid {
+        gap: 5%;
+    }
+}
+
+/* ==============================
+   CELULARES
+============================== */
+
+@media (max-width: 700px) {
+    .header {
+        padding: 24px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 14px 20px;
+    }
+
+    .nav a {
+        font-size: 10px;
+    }
+
+    .btn-agendar {
+        min-height: 44px;
+    }
+
+    .hero-conteudo {
+        min-height: 160px;
+        padding: 30px 6%;
+    }
+
+    .carousel {
+        min-height: 48px;
+        padding: 0 5%;
+        gap: 12px;
+    }
+
+    .carousel-bars {
+        gap: 5px;
+    }
+
+    .carousel-bars span {
+        height: 4px;
+    }
+
+    .section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .atendimento {
+        padding-top: 48px;
+        padding-bottom: 45px;
+    }
+
+    .section h2 {
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .card {
+        min-height: 130px;
+        padding: 24px 20px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .consulta {
+        padding-top: 0;
+        padding-bottom: 50px;
+    }
+
+    .consulta-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .consulta-texto p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .localizacao {
+        max-width: none;
+        padding: 25px 18px;
+    }
+
+    .localizacao h3 {
+        font-size: 23px;
+    }
+
+    .localizacao p {
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 30px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+    }
+
+    .footer-info p {
+        font-size: 11px;
+    }
+
+    .social a {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Acessibilidade: reduz animações quando solicitado */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
+
+.hero-texto {
+    max-width: 720px;
+}
+
+.hero-etiqueta {
+    display: block;
+    margin-bottom: 15px;
+    color: var(--roxo);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-texto h1 {
+    max-width: 700px;
+    margin-bottom: 15px;
+    color: var(--roxo);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 3.5vw, 52px);
+    line-height: 1.15;
+}
+
+.hero-texto p {
+    max-width: 570px;
+    margin-bottom: 24px;
+    color: #504b53;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+    .hero-texto h1 {
+        font-size: 32px;
+    }
+
+    .hero-texto p {
+        font-size: 15px;
+    }
+
+    .hero-etiqueta {
+        font-size: 10px;
+    }
+}
+
+/* Acessibilidade: foco visível para navegação por teclado */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid rgba(78, 71, 149, 0.5);
+    outline-offset: 3px;
+}
+
+.footer a:focus-visible,
+.localizacao a:focus-visible,
+.social a:focus-visible {
+    outline-color: #fff;
+}
